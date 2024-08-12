@@ -52,7 +52,7 @@ Users should be able to:
 
 - Optimising the usage of Style-Component for react components such as using Theming.
 - Implementing Object.keys and Object.entries function 
-- Filter job listings based on the categories
+- Filtered the data using the `filter` function to display only the relevant records from the dataset.
 
 ```javascript
  {Object.entries(filters).map(filter => {
