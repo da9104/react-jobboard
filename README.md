@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![alt text](.public/screenshot.png "screen shot")
 
 ### Links
 
