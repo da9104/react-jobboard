@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { COLOR_SCHEME } from '../theme'
 
 export const FilterItemContainer = styled.div`
     display: flex;
@@ -8,8 +7,8 @@ export const FilterItemContainer = styled.div`
 export const FilterButton = styled.button`
     font-family: inherit;
     font-weight: 700;
-    background: ${COLOR_SCHEME.SECONDARY};
-    color: ${COLOR_SCHEME.PRIMARY};
+    background: ${props => props.theme.COLOR_SCHEME.SECONDARY};
+    color: ${props => props.theme.COLOR_SCHEME.PRIMARY};
     padding: 0 10px;
     height: 32px;
     border-radius: .5em;
@@ -20,8 +19,8 @@ export const FilterButton = styled.button`
     border: none;
     outline: none;
     &:hover {
-        background: ${COLOR_SCHEME.PRIMARY};
-        color: ${COLOR_SCHEME.SECONDARY};
+        background: ${props => props.theme.COLOR_SCHEME.PRIMARY};
+        color: ${props => props.theme.COLOR_SCHEME.SECONDARY};
         border-radius: .5em 0 0 .5em;
         transition: all 250ms;
     }
@@ -29,9 +28,9 @@ export const FilterButton = styled.button`
 
 export const FilterButtonClose = styled.span`
 
-    background: ${COLOR_SCHEME.PRIMARY};
+    background: ${props => props.theme.COLOR_SCHEME.PRIMARY};
     font-weight: 700;
-    color: ${COLOR_SCHEME.WHITE};
+    color: ${props => props.theme.COLOR_SCHEME.WHITE};
     display: inline-block;
     width: 32px;
     height: 32px;
@@ -45,7 +44,7 @@ export const FilterButtonClose = styled.span`
     margin-bottom: 1em;
     box-sizing: border-box;
     &:hover {
-        background: ${COLOR_SCHEME.SECONDARY_DARKEST};
+        background: ${props => props.theme.COLOR_SCHEME.SECONDARY_DARKEST};
         transition: all 250ms ease-in-out;
     }
 `

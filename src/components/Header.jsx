@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import { COLOR_SCHEME } from '../theme'
+import bgHeaderDesktop from '/images/bg-header-desktop.svg';
 
 export const HeaderContainer = styled.div`
     height: 156px;
-    background: ${COLOR_SCHEME.PRIMARY};
-    background-image: url('images/bg-header-desktop.svg');
+    background: ${(props) => props.theme.COLOR_SCHEME.PRIMARY};
+    background-image: url(${bgHeaderDesktop});
     background-position-x: center;
     background-size: cover;
 `

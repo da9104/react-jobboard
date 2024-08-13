@@ -1,7 +1,6 @@
+import styled, { keyframes } from 'styled-components'
 import { v4 as uuidv4 } from 'uuid';
 import FilterItem from './FilterItem'
-import styled, { keyframes } from 'styled-components'
-import { COLOR_SCHEME, BOX_SHADOW } from '../theme'
 
 // for animating the loading of the filter list container
 const fadeIn = keyframes`
@@ -15,14 +14,14 @@ const fadeIn = keyframes`
 
 export const FilterListContainer = styled.div`
     width: 80%;
-    background: ${COLOR_SCHEME.WHITE};
+    background: ${props => props.theme.COLOR_SCHEME.WHITE};
     margin: -2em auto 1.5em;
     padding: 1em 2em 0;
     display: flex;
     border-radius: .5em;
     box-sizing: border-box;
-    box-shadow: ${BOX_SHADOW.PRIMARY_COLOR};
-    animation: ${fadeIn} 250ms;    
+    box-shadow: ${props => props.theme.BOX_SHADOW.PRIMARY_COLOR};
+    animation: ${props => props.theme.fadeIn} 250ms;    
 `
 
 export const FilterWrapper = styled.div`
@@ -31,7 +30,7 @@ export const FilterWrapper = styled.div`
 `
 
 export const FilterListClear = styled.div`
-    color: ${COLOR_SCHEME.SECONDARY_DARKER};
+    color: ${props => props.theme.COLOR_SCHEME.SECONDARY_DARKER};
     font-size: .8125rem;
     font-weight: 700;
     display: flex;
@@ -42,12 +41,11 @@ export const FilterListClear = styled.div`
     margin: 0 0 0 auto;
     &:hover {
         text-decoration: underline;
-        color: ${COLOR_SCHEME.PRIMARY};
+        color: ${props => props.theme.COLOR_SCHEME.PRIMARY};
     }
 `
 
 export default function FilterList({ filters, setFilters }) {
-
     function handleFilterListClear() {
         setFilters({})
     }
