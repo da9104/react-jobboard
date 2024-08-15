@@ -144,7 +144,9 @@ export const JobPostFilterButton = styled.button`
 
 export default function JobPost ({ job, filters, setFilters }) {
 
-    const imgPath = new URL(`${job.logo}`, import.meta.url).href
+  //  const imgPath = new URL(`${job.logo}`, import.meta.url).href
+    const imgPath = import.meta.env.BASE_URL + job.logo
+
 
     function handleAddFilter(filterValue, filterFieldName){
 
